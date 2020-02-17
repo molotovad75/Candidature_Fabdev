@@ -10,3 +10,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
     accessToken: 'pk.eyJ1Ijoic2FsdXRhbXlhbWlnbyIsImEiOiJjazZxa3hhMXcwYWFyM25xbGJvOXhtYnp3In0.3CfXpHCip_7Qj8BPrG5FVQ'
 }).addTo(mymap);
+
+
+L.marker([48.841788, 2.268595]).addTo(mymap)
+    .bindPopup('IUT Paris Descartes')
+    .openPopup();
