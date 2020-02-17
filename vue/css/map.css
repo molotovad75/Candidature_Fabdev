@@ -1,3 +1,6 @@
 #mapid {
     height: 180px;
 }
+html.no-js {
+    background-color: red;
+}
