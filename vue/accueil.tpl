@@ -26,4 +26,17 @@
 
 <script src="./vue/js/carte.js">
 </script>
+
+<script src="./vue/js/alertes.js">
+</script>
+
+
+
+
+<?php
+if ($option == "inscription"){
+  echo('<script language="javascript">apresInscription();</script>');
+}
+
+?>
 </html>
