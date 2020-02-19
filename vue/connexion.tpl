@@ -6,6 +6,15 @@
 <link rel="stylesheet" href="./vue/css/connexion.css" media="all">
 </head>
 
+<div class="lines">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
+
+
 <div class="login-page">
   <div class="form">
     <form class="login-form" action="index.php?controleur=utilisateur&action=verifConnexion" method="post">

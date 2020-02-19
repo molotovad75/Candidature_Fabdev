@@ -13,8 +13,14 @@
         inscrireBD($infos);
     }
     
-    function connecte(){
-        
+    function connecte($pseudo){
+        require_once ("./modele/utilisateurBD.php");
+        setBConnectBD($pseudo, true);
+    }
+
+    function deconnecte($pseudo){
+        require_once ("./modele/utilisateurBD.php");
+        setBConnectBD($pseudo, false);
     }
     
 

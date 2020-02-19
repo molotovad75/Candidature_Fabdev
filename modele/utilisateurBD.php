@@ -15,6 +15,23 @@
         return ;
     }
 
+    function setBConnectBD($pseudo, $boolean){
+        require ("../modele/connect.php");
+        $sql = "UPDATE utilisateur SET bConnect =:val
+        WHERE pseudo=:utilisateurPseudo";
+    
+        try {
+            $commande = $pdo->prepare($sql);
+            $commande->bindParam(':val', $boolean);
+            $commande->bindParam(':utilisateurPseudo', $pseudo);
+            $bool = $commande->execute();	
+        }
+        catch (PDOException $e) {
+            echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+            die();
+        }
+    }
+
     function recupMdpBD($login) {
         require ("./modele/connect.php");
         $sql = "SELECT mdp FROM utilisateur WHERE pseudo=?";
@@ -38,6 +55,8 @@
             die(); 
         }
     }
+
+
 
     function pseudoDejaPrisBD($pseudo){
         require ("./modele/connect.php");
