@@ -16,7 +16,7 @@
     }
 
     function setBConnectBD($pseudo, $boolean){
-        require ("../modele/connect.php");
+        require ("./modele/connect.php");
         $sql = "UPDATE utilisateur SET bConnect =:val
         WHERE pseudo=:utilisateurPseudo";
     
@@ -32,7 +32,7 @@
         }
     }
 
-    function recupMdpBD($login) {
+    function recupMdpBD($pseudo) {
         require ("./modele/connect.php");
         $sql = "SELECT mdp FROM utilisateur WHERE pseudo=?";
         $resultat = array();
@@ -41,12 +41,11 @@
             $bool = $commande->execute(array($pseudo));
             if($bool){
                 $resultat = $commande->fetch(PDO::FETCH_ASSOC);
-                var_dump($resultat);
                 if ($resultat == false) {
-                    return(false);
+                    return("");
                 }
                 else {
-                    return($resultat);
+                    return($resultat['mdp']);
                 }
             }
         }

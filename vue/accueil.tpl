@@ -21,7 +21,7 @@
 <body>
 <nav class="clearfix">
   <ul class="clearfix">
-    <li><a href="index.php?controleur=utilisateur&action=redirectionAccueil">Accueil</a></li>
+    <li><a href="index.php?controleur=utilisateur&action=accueil">Accueil</a></li>
     <li><a href="#">Démo</a></li>
     <li><a href="index.php?controleur=utilisateur&action=redirectionInscription">Inscription</a></li>
     <li><a href="index.php?controleur=utilisateur&action=redirectionConnexion">Connexion</a></li>
@@ -51,8 +51,12 @@
 if (isset($options['provenance'])) {
   if ($options['provenance'] == "inscription") {
     echo('<script language="javascript">apresInscription();</script>');
+  }
+  else if ($options['provenance'] == "connexion") {
+    echo('<script language="javascript">apresConnexion();</script>');
+  }
 }
-}
+
 
 ?>
 </html>

@@ -22,8 +22,6 @@
         require_once ("./modele/utilisateurBD.php");
         setBConnectBD($pseudo, false);
     }
-    
-
 
 
     /* FONCTIONS DE VERIFICATION */
@@ -32,18 +30,18 @@
     function verifConnexion(){
         $_POST['options'] = array();
 
-        if (pseudoInexistant()){
+        if (pseudoInexistant($_POST['pseudo'])){
             $_POST['options']['pseudoInexistant'] = true;
         }
-        if (mdpIncorrect($_POST['pseudo'])){
+        if (mdpIncorrect($_POST['pseudo'],$_POST['mdp'])){
             $_POST['options']['mdpIncorrect'] = true;
         }
         if (count($_POST['options']) == 0){
-            var_dump("vous êtes bien connecté");
+            connecte($_POST['pseudo']);
+            accueilApresConnexion();
         }
         else {
             var_dump("vous n'êtes pas connecté");
-            var_dump($_POST['options']);
         }
     }
 
@@ -87,7 +85,7 @@
     
     function mdpIncorrect($pseudo,$mdpSaisi){
         require_once ("./modele/utilisateurBD.php");
-        return (password_verify($mdpSaisi,recupMdpBD($pseudo)));
+        return (!password_verify($mdpSaisi,recupMdpBD($pseudo)));
     }
     
     function pseudoInexistant($pseudo){
@@ -114,6 +112,11 @@
 
     function accueilApresInscription(){
         $options['provenance'] = "inscription";
+        require ("./vue/accueil.tpl");
+    }
+
+    function accueilApresConnexion(){
+        $options['provenance'] = "connexion";
         require ("./vue/accueil.tpl");
     }
 
