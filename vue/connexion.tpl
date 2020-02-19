@@ -1,23 +1,20 @@
 <!doctype html>
 <html class="no-js" lang="fr">
+<head>
+<title>Se connecter</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./vue/css/connexion.css" media="all">
+</head>
 
 <div class="login-page">
   <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
     <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="Pseudo"/>
+      <input type="password" placeholder="Mot de passe"/>
       <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
+      <p class="message">Pas encore inscrit ? <a href="#">Créer un compte</a></p>
     </form>
   </div>
 </div>
-
 
 </html>

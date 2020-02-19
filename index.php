@@ -11,6 +11,7 @@
     else { //absence de paramètres : prévoir des valeurs par défaut
 	    $controle = "utilisateur";
         $action= "redirectionConnexion";
+        // $action= "redirectionInscription";
     }
     
     //inclure le fichier php de contrôle 
