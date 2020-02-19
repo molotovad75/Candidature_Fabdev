@@ -4,7 +4,7 @@
 	$hostname = "localhost";
 	$base="base-pwebc";
 	$loginBD= "root";
-	$passBD="root";
+	$passBD="";
 	$pdo = null;
 
 try {

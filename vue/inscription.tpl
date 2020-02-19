@@ -25,12 +25,13 @@
 					
 					<input type="text" name=pseudo placeholder=
 						<?php 	
-								if ($_POST['options']['pseudoDejaPris']) {
-									
-									echo("\"Le pseudo " . $_POST['pseudo'] . " est déjà utilisé\"" . " class=\"text rouge\" ");
-								}
-								else if (isset($_POST['pseudo'])) {
-									echo("\"Pseudo\" class=\"text \" value=\"". $_POST['pseudo'] ."\"");
+								if (isset($_POST['options'])) {
+									if ($_POST['options']['pseudoDejaPris']) {
+										echo("\"Le pseudo " . $_POST['pseudo'] . " est déjà utilisé\"" . " class=\"text rouge\" ");
+									}
+									else if (isset($_POST['pseudo'])) {
+										echo("\"Pseudo\" class=\"text \" value=\"". $_POST['pseudo'] ."\"");
+									}
 								}
 								else {
 									echo("\"Pseudo\" class=\"text \"");
@@ -39,12 +40,14 @@
 						required="">
 					<input type="email" name="email" placeholder=
 						<?php 	
-								if ($_POST['options']['emailDejaUtilise']) {
-									
-									echo("\"L'email " . $_POST['email'] . " est déjà utilisé\"" . " class=\"text rouge email\" ");
-								}
-								else if (isset($_POST['pseudo'])) {
-									echo("\"Email\" class=\"text email\" value=\"". $_POST['email'] ."\"");
+								if (isset($_POST['options'])) {
+									if ($_POST['options']['emailDejaUtilise']) {
+										
+										echo("\"L'email " . $_POST['email'] . " est déjà utilisé\"" . " class=\"text rouge email\" ");
+									}
+									else if (isset($_POST['pseudo'])) {
+										echo("\"Email\" class=\"text email\" value=\"". $_POST['email'] ."\"");
+									}
 								}
 								else {
 									echo("\"Email\" class=\"text email\"");
@@ -55,9 +58,11 @@
 					<input class="text" type="password" name="mdp" placeholder="Mot de passe" required="">
 					<input class="text w3lpass" type="password" name="mdp_bis" placeholder="Confirmation de mot de passe" required="">
 					<?php 	
-								if ($_POST['options']['mdpDifferents']) {
-									
-									echo("<div class=\"text mdpDifferents\">Vous avez entré des mots de passe différents</div>");	
+								if (isset($_POST['options'])){
+									if ($_POST['options']['mdpDifferents']) {
+										
+										echo("<div class=\"text mdpDifferents\">Vous avez entré des mots de passe différents</div>");	
+									}
 								}
 					?> 
 					<div class="wthree-text">
