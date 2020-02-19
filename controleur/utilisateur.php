@@ -1,13 +1,5 @@
 <?php
 
-    
-
-
-    
-    
-    
-    
-
     function inscrire($infos) {
         require_once ("./modele/utilisateurBD.php");
         inscrireBD($infos);
@@ -15,11 +7,15 @@
     
     function connecte($pseudo){
         require_once ("./modele/utilisateurBD.php");
+        $_SESSION['pseudo'] = $_POST['pseudo'];
         setBConnectBD($pseudo, true);
+        $_SESSION['bConnect'] = true;
     }
 
     function deconnecte($pseudo){
         require_once ("./modele/utilisateurBD.php");
+        $_SESSION['bConnect'] = false;
+        $_SESSION= array();
         setBConnectBD($pseudo, false);
     }
 
@@ -62,6 +58,7 @@
             $infos = $_POST;
             $infos['mdp'] = password_hash($infos['mdp'],PASSWORD_DEFAULT);
             inscrire($infos);
+            connecte($_POST['pseudo']);
             accueilApresInscription();
         }
         else {
@@ -115,8 +112,17 @@
         require ("./vue/accueil.tpl");
     }
 
+    function accueilApresDeconnexion(){
+        if (count($_SESSION) != 0){
+            deconnecte($_SESSION['pseudo']);
+            $options['provenance'] = "deconnexion";
+        }
+        require ("./vue/accueil.tpl");
+    }
+
     function accueilApresConnexion(){
         $options['provenance'] = "connexion";
+        
         require ("./vue/accueil.tpl");
     }
 

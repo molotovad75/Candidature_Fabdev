@@ -23,10 +23,20 @@
   <ul class="clearfix">
     <li><a href="index.php?controleur=utilisateur&action=accueil">Accueil</a></li>
     <li><a href="#">Démo</a></li>
-    <li><a href="index.php?controleur=utilisateur&action=redirectionInscription">Inscription</a></li>
-    <li><a href="index.php?controleur=utilisateur&action=redirectionConnexion">Connexion</a></li>
     <li><a href="#">A propos</a></li>
     <li><a href="#">Contact</a></li>	
+    <?php if (isset($_SESSION['bConnect'])){
+            if ($_SESSION['bConnect']) {
+              echo('<li><a href="index.php?controleur=utilisateur&action=accueilApresDeconnexion">Déconnexion</a></li>');
+            }
+          }
+          else { 
+            echo(
+                  '<li><a href="index.php?controleur=utilisateur&action=redirectionInscription">Inscription</a></li>
+                  <li><a href="index.php?controleur=utilisateur&action=redirectionConnexion">Connexion</a></li>'
+                );
+          }
+    ?>
   </ul>
   <a href="#" id="pull">Menu</a>
 </nav>
@@ -49,12 +59,20 @@
 
 <?php
 if (isset($options['provenance'])) {
-  if ($options['provenance'] == "inscription") {
-    echo('<script language="javascript">apresInscription();</script>');
+  switch ($options['provenance']) {
+    case "inscription";
+      echo('<script language="javascript">apresInscription();</script>');
+      break;
+
+    case "connexion";
+      echo('<script language="javascript">apresConnexion();</script>');
+      break;
+
+    case "deconnexion";
+      echo('<script language="javascript">apresDeconnexion();</script>');
+      break;
   }
-  else if ($options['provenance'] == "connexion") {
-    echo('<script language="javascript">apresConnexion();</script>');
-  }
+  
 }
 
 
