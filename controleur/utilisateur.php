@@ -22,21 +22,26 @@
             $_POST['options']['emailDejaUtilise'] = true;
         }
         if (count($_POST['options']) == 0) {
+            $infos = $_POST;
+            inscrire($infos);
             accueilApresInscription();
         }
         else {
-
             redirectionInscription();
         }
     }
     
     function accueilApresInscription(){
-        // $options="inscription";
+        $options['provenance'] = "inscription";
         require ("./vue/accueil.tpl");
     }
 
     function redirectionInscription(){
         require ("./vue/inscription.tpl");
+    }
+
+    function redirectionConnexion(){
+        require ("./vue/connexion.tpl");
     }
 
     function inscrire($infos) {

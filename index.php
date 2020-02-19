@@ -10,7 +10,7 @@
     }
     else { //absence de paramètres : prévoir des valeurs par défaut
 	    $controle = "utilisateur";
-	    $action= "redirectionInscription";
+        $action= "redirectionConnexion";
     }
     
     //inclure le fichier php de contrôle 

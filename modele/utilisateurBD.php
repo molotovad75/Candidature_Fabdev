@@ -1,7 +1,18 @@
 <?php 
 
-    function inscrireBD(){
+    function inscrireBD($infos){
         require ("./modele/connect.php");
+        $sql = 'INSERT INTO utilisateur (pseudo, email, mdp) VALUES ( ? , ? , ? )';
+        try {
+            
+            $commande = $pdo->prepare($sql);
+            $bool = $commande->execute(array($infos['pseudo'], $infos['email'] , $infos['mdp']));
+        }
+        catch (PDOException $e) {
+            echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+            die();
+        }
+        return ;
     }
 
     function connectionBD($login, $mdpCrypte) {

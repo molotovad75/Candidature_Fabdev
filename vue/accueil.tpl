@@ -34,8 +34,10 @@
 
 
 <?php
-if ($option == "inscription"){
-  echo('<script language="javascript">apresInscription();</script>');
+if (isset($options['provenance'])) {
+  if ($options['provenance'] == "inscription") {
+    echo('<script language="javascript">apresInscription();</script>');
+}
 }
 
 ?>

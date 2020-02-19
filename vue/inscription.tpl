@@ -25,7 +25,7 @@
 					
 					<input type="text" name=pseudo placeholder=
 						<?php 	
-								if (isset($_POST['options'])) {
+								if (isset($_POST['options']['pseudoDejaPris'])) {
 									if ($_POST['options']['pseudoDejaPris']) {
 										echo("\"Le pseudo " . $_POST['pseudo'] . " est déjà utilisé\"" . " class=\"text rouge\" ");
 									}
@@ -40,7 +40,7 @@
 						required="">
 					<input type="email" name="email" placeholder=
 						<?php 	
-								if (isset($_POST['options'])) {
+								if (isset($_POST['options']['emailDejaUtilise'])) {
 									if ($_POST['options']['emailDejaUtilise']) {
 										
 										echo("\"L'email " . $_POST['email'] . " est déjà utilisé\"" . " class=\"text rouge email\" ");
@@ -58,7 +58,7 @@
 					<input class="text" type="password" name="mdp" placeholder="Mot de passe" required="">
 					<input class="text w3lpass" type="password" name="mdp_bis" placeholder="Confirmation de mot de passe" required="">
 					<?php 	
-								if (isset($_POST['options'])){
+								if (isset($_POST['options']['mdpDifferents'])){
 									if ($_POST['options']['mdpDifferents']) {
 										
 										echo("<div class=\"text mdpDifferents\">Vous avez entré des mots de passe différents</div>");	
