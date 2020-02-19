@@ -74,12 +74,12 @@
 					</div>
 					<input type="submit" value="S'ENREGISTRER">
 				</form>
-				<p>Vous avez déjà un compte ?<a href="#"> Se connecter !</a></p>
+				<p>Vous avez déjà un compte ?<a href="index.php?controleur=utilisateur&action=redirectionConnexion"> Se connecter !</a></p>
 			</div>
 		</div>
 
 		<div class="colorlibcopy-agile">
-			<h2><p><a href="./index.php" target="_blank">Retour</a></p></h2>
+			<h2><p><a href="./index.php?controleur=utilisateur&action=accueil" target="_blank">Retour</a></p></h2>
 		</div>
 		
 		<ul class="colorlib-bubbles">

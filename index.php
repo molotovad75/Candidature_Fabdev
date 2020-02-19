@@ -10,13 +10,14 @@
     }
     else { //absence de paramètres : prévoir des valeurs par défaut
 	    $controle = "utilisateur";
-        $action= "redirectionConnexion";
+        // $action= "redirectionConnexion";
         // $action= "redirectionInscription";
+        $action="accueil";
     }
     
     //inclure le fichier php de contrôle 
     //et lancer la fonction-action issue de ce fichier.	
 
-	require ('./controleur/' . $controle . '.php');   
+	require ('./controleur/' . $controle . '.php');
     $action ();
 ?>
