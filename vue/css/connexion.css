@@ -10,7 +10,7 @@
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;
-  margin: 0 auto 100px;
+  margin: 0 auto 25px;
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -46,7 +46,7 @@
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
-  font-size: 12px;
+  font-size: 14px;
 }
 .form .message a {
   color: #4CAF50;
@@ -97,4 +97,27 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
+}
+
+.btnRetour {
+  text-align: center;
+}
+
+.btnRetour a{
+  padding:10px;
+  text-decoration: none;
+  color: white;
+  border: solid rgba(255, 255, 255, 0) 2px;
+  
+  transition: border-color ease 1.3s, color ease 1.3s, background-color ease 1.3s, box-shadow ease 1.3s;
+  border-radius: 35%;
+}
+
+.btnRetour a:hover{
+  background-color: white;
+  border-color: rgb(255, 255, 255);
+  color :#8DC26F;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
