@@ -27,7 +27,7 @@
 						<?php 	
 								if (isset($_POST['options']['pseudoDejaPris'])) {
 									if ($_POST['options']['pseudoDejaPris']) {
-										echo("\"Le pseudo " . $_POST['pseudo'] . " est déjà utilisé\"" . " class=\"text rouge\" ");
+										echo("\"Le pseudo '" . $_POST['pseudo'] . "' est déjà utilisé\"" . " class=\"text rouge\" ");
 									}
 									else if (isset($_POST['pseudo'])) {
 										echo("\"Pseudo\" class=\"text \" value=\"". $_POST['pseudo'] ."\"");
@@ -43,7 +43,7 @@
 								if (isset($_POST['options']['emailDejaUtilise'])) {
 									if ($_POST['options']['emailDejaUtilise']) {
 										
-										echo("\"L'email " . $_POST['email'] . " est déjà utilisé\"" . " class=\"text rouge email\" ");
+										echo("\"L'email '" . $_POST['email'] . "' est déjà utilisé\"" . " class=\"text rouge email\" ");
 									}
 									else if (isset($_POST['pseudo'])) {
 										echo("\"Email\" class=\"text email\" value=\"". $_POST['email'] ."\"");
