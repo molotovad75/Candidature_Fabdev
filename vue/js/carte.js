@@ -1,8 +1,12 @@
-var mymap = L.map('mapid').setView([48.8534, 2.3488], 12);
-
-var couche = new
-L.TileLayer('https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=7c460f8f625a4bdbbfc9620246420c0b');
-mymap.addLayer(couche);
+window.onload = function(){
+	var mymap = L.map('mapid').setView([48.8534, 2.3488], 12);
+	var couche = new
+	L.TileLayer('https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=7c460f8f625a4bdbbfc9620246420c0b');
+	mymap.addLayer(couche);
+	$("calculIt").click(function(){
+		calculItineraire();
+	
+}
 
 
 /*L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -15,6 +19,9 @@ mymap.addLayer(couche);
 }).addTo(mymap);
 */
 
-L.marker([48.841788, 2.268595]).addTo(mymap)
+/*L.marker([48.841788, 2.268595]).addTo(mymap)
     .bindPopup('IUT Paris Descartes')
     .openPopup();
+*/
+
+
