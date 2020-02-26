@@ -42,7 +42,7 @@
                     <li><a href="index.php?controleur=utilisateur&action=redirectionConnexion">Connexion</a></li>'
                   );
             }
-
+  ?>
   </ul>
   <a href="#" id="pull">Menu</a>
 </nav>
