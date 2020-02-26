@@ -48,6 +48,9 @@
 </nav>
 <div id="msgBienvenue">BIENVENUE</div>
 
+<p class="intro">Vous souhaitez personnaliser votre propre carte intéractive ?</p> 
+<p class="intro">Vous êtes au bon endroit</p> 
+
 <input type="text" id="LieuDepart">Saisissez votre lieu de départ</input>
 <input type="text" id="LieuArrivée">Saisissez votre lieu d'arrivée</input>
 <button id="calculIt">Calculer l'itinéraire</button>

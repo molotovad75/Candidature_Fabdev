@@ -1,7 +1,13 @@
 
 #msgBienvenue{
-    font-size: 36px;
+    font-size: 46px;
     color : white;
     text-align: center;
     margin-bottom: 50px;
+}
+
+.intro {
+    text-align: center;
+    color : white;
+    font-size: 26px;
 }
