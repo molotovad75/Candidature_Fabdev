@@ -42,19 +42,18 @@
                     <li><a href="index.php?controleur=utilisateur&action=redirectionConnexion">Connexion</a></li>'
                   );
             }
-      ?>
-    </ul>
-    <a href="#" id="pull">Menu</a>
-  </nav>
 
-  <div id="msgBienvenue">BIENVENUE</div>
+  </ul>
+  <a href="#" id="pull">Menu</a>
+</nav>
+<div id="msgBienvenue">BIENVENUE</div>
+
+<input type="text" id="LieuDepart">Saisissez votre lieu de départ</input>
+<input type="text" id="LieuArrivée">Saisissez votre lieu d'arrivée</input>
+<button id="calculIt">Calculer l'itinéraire</button>
+
+
 </header>  
-
-
-<div class="content">
-
-
-</div>
 
 <div id="mapid"></div>
 

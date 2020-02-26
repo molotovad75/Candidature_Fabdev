@@ -1,8 +1,15 @@
-var mymap = L.map('mapid').setView([48.8534, 2.3488], 12);
+window.onload = function(){
+	var mymap = L.map('mapid').setView([48.8534, 2.3488], 12);
+	var couche = new
+	L.TileLayer('https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=7c460f8f625a4bdbbfc9620246420c0b');
+	mymap.addLayer(couche);
+	$("calculIt").click(function(){
+		calculItineraire();
+	
+}
 
 
-
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+/*L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
@@ -10,8 +17,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
     accessToken: 'pk.eyJ1Ijoic2FsdXRhbXlhbWlnbyIsImEiOiJjazZxa3hhMXcwYWFyM25xbGJvOXhtYnp3In0.3CfXpHCip_7Qj8BPrG5FVQ'
 }).addTo(mymap);
+*/
 
-
-L.marker([48.841788, 2.268595]).addTo(mymap)
+/*L.marker([48.841788, 2.268595]).addTo(mymap)
     .bindPopup('IUT Paris Descartes')
     .openPopup();
+*/
+
+
