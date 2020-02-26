@@ -40,6 +40,9 @@
   </ul>
   <a href="#" id="pull">Menu</a>
 </nav>
+<input type="text" id="LieuDepart">Saisissez votre lieu de départ</input>
+<input type="text" id="LieuArrivée">Saisissez votre lieu d'arrivée</input>
+<button id="calculIt">Calculer l'itinéraire</button>
 <div id="mapid"></div>
 </body>
 
