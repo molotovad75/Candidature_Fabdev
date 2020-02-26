@@ -8,39 +8,58 @@
   crossorigin=""/>
   <link rel="stylesheet" href="./vue/css/menu.css" media="all">
   <link rel="stylesheet" href="./vue/css/map.css" media="all">
+  <link rel="stylesheet" href="./vue/css/accueil.css" media="all">
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
   crossorigin="">
 </script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   
 </head>
 
-  
 
-<body>
-<nav class="clearfix">
-  <ul class="clearfix">
-    <li><a href="index.php?controleur=utilisateur&action=accueil">Accueil</a></li>
-    <li><a href="#">Démo</a></li>
-    <li><a href="#">A propos</a></li>
-    <li><a href="#">Contact</a></li>	
-    <?php if (isset($_SESSION['bConnect'])){
-            if ($_SESSION['bConnect']) {
-              echo('<li><a href="index.php?controleur=utilisateur&action=accueilApresDeconnexion">Déconnexion</a></li>');
+
+<body id="body">
+<header>
+  <nav class="clearfix">
+    <ul class="clearfix">
+      <li><a href="index.php?controleur=utilisateur&action=accueil">Accueil</a></li>
+      <li><a href="#">Démo</a></li>
+      <li><a href="#">A propos</a></li>
+      <li><a href="#">Contact</a></li>
+      <?php if (isset($_SESSION['bConnect'])){
+              if ($_SESSION['bConnect']) {
+                echo('<li><a href="index.php?controleur=utilisateur&action=accueilApresDeconnexion">Déconnexion</a></li>');
+              }
             }
-          }
-          else { 
-            echo(
-                  '<li><a href="index.php?controleur=utilisateur&action=redirectionInscription">Inscription</a></li>
-                  <li><a href="index.php?controleur=utilisateur&action=redirectionConnexion">Connexion</a></li>'
-                );
-          }
-    ?>
-  </ul>
-  <a href="#" id="pull">Menu</a>
-</nav>
+            else { 
+              echo(
+                    '<li><a href="index.php?controleur=utilisateur&action=redirectionInscription">Inscription</a></li>
+                    <li><a href="index.php?controleur=utilisateur&action=redirectionConnexion">Connexion</a></li>'
+                  );
+            }
+      ?>
+    </ul>
+    <a href="#" id="pull">Menu</a>
+  </nav>
+
+  <div id="msgBienvenue">BIENVENUE</div>
+</header>  
+
+
+<div class="content">
+
+
+</div>
+
 <div id="mapid"></div>
+
+
+
 </body>
 
 
