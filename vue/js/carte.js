@@ -4,8 +4,9 @@ window.onload = function(){
 	L.TileLayer('https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=7c460f8f625a4bdbbfc9620246420c0b');
 	mymap.addLayer(couche);
 	$("calculIt").click(function(){
-		calculItineraire();
-	
+            calculItineraire();
+        })
+    
 }
 
 
@@ -23,5 +24,4 @@ window.onload = function(){
     .bindPopup('IUT Paris Descartes')
     .openPopup();
 */
-
 
