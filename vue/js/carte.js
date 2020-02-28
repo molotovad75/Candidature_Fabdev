@@ -6,7 +6,23 @@ window.onload = function(){
 	$("calculIt").click(function(){
             calculItineraire();
         })
-    
+
+    /*test sur la souris*/
+    // var mousePosition = L.geoportalControl.MousePosition({
+    //     displayCoordinate : true,
+    //     altitude : {
+    //             triggerDelay : 500
+    //     } 
+    // });
+    // mymap.addControl(mousePosition);
+    var mousePosition = new ol.control.MousePosition({
+        coordinateFormat: ol.coordinate.createStringXY(2),
+        projection: 'EPSG:4326',
+        target: document.getElementById('myposition'),
+        undefinedHTML: '&nbsp;'
+      });
+
+      mymap.addControl(mousePosition);
 }
 
 

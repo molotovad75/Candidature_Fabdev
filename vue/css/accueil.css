@@ -11,3 +11,19 @@
     color : white;
     font-size: 26px;
 }
+
+#draggable { 
+    width: 150px; height: 150px; padding: 0.5em; background-color: red;z-index:99
+}
+
+#mapid{
+    z-index:1;
+}
+
+header{
+    margin-bottom: 40px;
+}
+
+.disappear{
+    display: none;
+}

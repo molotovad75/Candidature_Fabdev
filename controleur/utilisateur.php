@@ -105,10 +105,12 @@
 
     function accueil(){
         require ("./vue/accueil.tpl");
+        
     }
 
     function accueilApresInscription(){
         $options['provenance'] = "inscription";
+        header("Location:index.php");
         accueil();
     }
 
@@ -117,12 +119,13 @@
             deconnecte($_SESSION['pseudo']);
             $options['provenance'] = "deconnexion";
         }
+        header("Location:index.php");
         accueil();
     }
 
     function accueilApresConnexion(){
         $options['provenance'] = "connexion";
-        
+        header("Location:index.php");
         accueil();
     }
 

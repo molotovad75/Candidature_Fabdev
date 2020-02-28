@@ -18,7 +18,9 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 
@@ -51,14 +53,24 @@
 <p class="intro">Vous souhaitez personnaliser votre propre carte intéractive ?</p> 
 <p class="intro">Vous êtes au bon endroit</p> 
 
-<input type="text" id="LieuDepart">Saisissez votre lieu de départ</input>
-<input type="text" id="LieuArrivée">Saisissez votre lieu d'arrivée</input>
+<input type="text" id="LieuDepart" placeholder="Saisissez votre lieu de départ"/>
+<input type="text" id="LieuArrivée" placeholder="Saisissez votre lieu d'arrivée"/>
 <button id="calculIt">Calculer l'itinéraire</button>
 
 
-</header>  
 
-<div id="mapid"></div>
+
+
+</header>  
+<div id="myposition"></div><br><br>
+<br>
+<br>
+<br>
+<div id="draggable" class="ui-widget-content">
+  <p>Drag me around</p>
+</div>
+
+<div id="mapid" class="ui-widget-header droppable"></div>
 
 
 
@@ -74,6 +86,7 @@
 </script>
 <script src="./vue/js/alertes.js">
 </script>
+<script src="./vue/js/draggable.js"></script>
 
 
 
