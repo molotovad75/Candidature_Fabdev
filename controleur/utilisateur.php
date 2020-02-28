@@ -105,7 +105,6 @@
 
     function accueil(){
         require ("./vue/accueil.tpl");
-        header("Location:index.php");
     }
 
     function accueilApresInscription(){
